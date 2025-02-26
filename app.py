@@ -9,6 +9,7 @@ if not GOOGLE_API_KEY:
     st.error("⚠️Missing Google GenAI API key! Please set it in environment variables.⚠️")
     st.stop()
 
+st.set_page_config(page_title="AI-Powered Travel Planner", page_icon="🌏", layout="wide")
 # Function to retrieve AI-powered travel suggestions
 def fetch_travel_recommendations(start, end):
     system_instruction = SystemMessage(
@@ -28,7 +29,7 @@ def fetch_travel_recommendations(start, end):
         return f"❌Unable to retrieve travel options: {str(error)}"
 
 # Streamlit UI Setup
-st.title("🌍Smart Travel Planner with AI🌏")
+st.title("🚂Smart Travel Planner with AI✈️")
 st.write("Enter travel details to get the best AI-generated travel suggestions!")
 
 # User Inputs
@@ -43,4 +44,3 @@ if st.button("Get Travel Suggestions"):
     else:
         st.warning("⚠️Both source and destination must be provided!⚠️")
 
-        
