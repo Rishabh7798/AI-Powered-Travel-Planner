@@ -30,11 +30,11 @@ def fetch_travel_recommendations(start, end):
 
 # Streamlit UI Setup
 st.title("🚂Smart Travel Planner with AI✈️")
-st.write("Enter travel details to get the best AI-generated travel suggestions!")
+st.write("✨Enter travel details to get the best AI-generated travel suggestions!✨")
 
 # User Inputs
-start_location = st.text_input("Source Location", placeholder="E.g. New Delhi")
-destination_location = st.text_input("Destination", placeholder="E.g. Lucknow")
+start_location = st.text_input("Source Location📍", placeholder="E.g. New Delhi")
+destination_location = st.text_input("Destination📍", placeholder="E.g. Lucknow")
 
 if st.button("Get Travel Suggestions"):
     if start_location.strip() and destination_location.strip():
